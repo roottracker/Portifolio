@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
 :root{
-  --bgColor: #0f0f0f0f;
+  --bgColor: #000000;
 }
 
 body {
     padding: 0;
     margin: 0;
-    box-sizing: 0;
-    background-color: var(--bgColor);
+    box-sizing: border-box;
 }
