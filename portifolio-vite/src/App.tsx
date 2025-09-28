@@ -2,9 +2,12 @@ import './App.css'
 import face1 from './assets/images/face1.png'
 import face2 from './assets/images/face2.png'
 import pfp from "./assets/images/Calendula-1.png";
+import symbol from './assets/images/symbol.png'
+import truth from './assets/images/truth.png'
 import { QuemSou} from './components/intro'
-import { Info3 } from './components/conhecimentos'
+import { Info3, Info4, Info5 } from './components/conhecimentos'
 import { useEffect, useState } from 'react'
+import { Footer } from './components/footer';
 
 
 function App() {
@@ -66,25 +69,32 @@ function App() {
         </div>
 
         <div className='flex justify-center items-center flex-col'>
-          <h3 className='mt-[50px] text-white font-[500] tracking-[10px] text-[18pt]'>Conhecimento</h3>
+          <h3 className='mt-[50px] text-white font-[700] tracking-[9px] text-[18pt]'>Conhecimento</h3>
           <Info3/>
-          <div>
-            <img src="" alt="" />
-          </div>
-
-          <div>
-
+          <div className='mt-50 mb-55 invert'>
+            <img draggable={false} src={symbol} alt="sas" width={'160px'}/>
           </div>
         </div>
 
-        <div></div>
+        <div className='flex justify-center items-center flex-col'>
+          <h3 className='mt-[50px] text-white font-[500] tracking-[10px] text-[18pt]'>Música</h3>
+          <Info4/>
+          <div className='mt-50 invert'>
+            <img src={truth} alt="truth" />
+          </div>
+        </div>
 
-        <div></div>
+        <div className='flex w-full justify-center items-center flex-col mt-50 mb-50'>
+          <div className='mt-[50px] flex justify-center items-center flex-col mb-15'>
+            <h3 className='text-white font-[500] tracking-[10px] text-[18pt]'>programação</h3>
+            <h3 className='text-white font-[500] tracking-[10px]'>e</h3>
+            <h3 className='text-white font-[500] tracking-[10px] text-[18pt]'>Tecnologia</h3>
+          </div>
+          <Info5/>
+        </div>
 
       </section>
-      
-      {/* Sessão do Footer/Contatos */}
-      <section></section>
+      <Footer/>
     </main>
   )
 }
